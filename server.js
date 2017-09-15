@@ -78,7 +78,7 @@ io.sockets.on('connection', function (socket) {
             time: data.time
         });
     });
-    
+
     socket.on('notify', function (data) {
         console.log("Notify :" + data.text);
         io.sockets.emit('notify', {
@@ -91,8 +91,18 @@ io.sockets.on('connection', function (socket) {
             class2: data.class2
         });
     });
-    socket.on('g_chat', function (data) {
-        io.sockets.emit('g_chat', {
+//    socket.on('g_chat', function (data) {
+//        io.sockets.emit('g_chat', {
+//            text: data.text,
+//            s_id: data.s_id,
+//            uname: data.uname,
+//            g_name: data.g_name,
+//            g_id: data.g_id
+//        });
+//    });
+    socket.on('g_chat_c', function (data) {
+        console.log("Chat -- " + data.uname +" -"+data.s_id+"-" + " : " + data.text);
+        io.sockets.emit('g_chat_c', {
             text: data.text,
             s_id: data.s_id,
             uname: data.uname,
