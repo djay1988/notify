@@ -1,5 +1,5 @@
 var PORT = 8181;
-var IPADDRESS = process.env.OPENSHIFT_INTERNAL_IP || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var IPADDRESS = '127.0.0.1';
 
 var express = require('express');
 var server;
