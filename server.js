@@ -10,17 +10,7 @@ app = express();
 // Allow cross origin requests.
 app.use(function (req, res, next) {
     var origin = '*';
-    try {
-        var parts = req.headers.referer.split('/').filter(function (n) {
-            return n;
-        });
-        if (parts.length >= 2) {
-            origin = parts[0] + '//' + parts[1];
-        }
-    } catch (e) {
-        // no referrer
-    }
-
+    
     res.setHeader('Access-Control-Allow-Origin', origin);
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
