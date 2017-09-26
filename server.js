@@ -58,7 +58,7 @@ console.log("Server Listen to port : " + PORT);
 
 
 // socket.io augments our existing HTTP server instance.
-io = require('socket.io').listen(server);
+io = require('socket.io')(server, {origins:'*:*'});
 
 io.sockets.on('connection', function (socket) {
 
