@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-var port = 443;
+var port = 80;
 var cors = require('cors');
 
 
@@ -38,6 +38,7 @@ io.sockets.on('connection', function (socket) {
     });
 
     socket.on('notify', function (data) {
+        console.log("Notify Data :  " + JSON.stringify(data));
         io.sockets.emit('notify', {
             title: data.title,
             text: data.text,
