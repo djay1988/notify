@@ -1,7 +1,7 @@
 {
-  "name": "OpenShift Socket APP",
+  "name": "samplesocket-io",
   "version": "1.0.0",
-  "description": "OpenShift Sample Socket Application",
+  "description": "Heroku Sample Socket Application",
   "keywords": [
     "OpenShift",
     "Node.js"

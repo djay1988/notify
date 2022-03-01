@@ -8,6 +8,9 @@ app = express();
 app.use(cors());
 
 
+app.get('/', (req, res) => {
+   res.send('Testing Node Server')
+});
 
 var io = require('socket.io').listen(app.listen(port));
 console.log("Listening on port " + port);
