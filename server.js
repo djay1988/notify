@@ -1,20 +1,12 @@
 var express = require("express");
 var app = express();
-var port = 80;
+var port = 443;
 var cors = require('cors');
 
 
 app = express();
 app.use(cors());
 
-
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", '*');
-    res.header("Access-Control-Allow-Credentials", true);
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
-    next();
-});
 
 
 var io = require('socket.io').listen(app.listen(port));
