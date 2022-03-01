@@ -1,12 +1,10 @@
 {
-  "name": "OpenShift-Sample-App",
+  "name": "OpenShift Socket APP",
   "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "description": "OpenShift Sample Socket Application",
   "keywords": [
     "OpenShift",
-    "Node.js",
-    "application",
-    "openshift"
+    "Node.js"
   ],
   "author": {
     "name": "OpenShift",
